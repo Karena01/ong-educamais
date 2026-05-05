@@ -1,125 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG EducaMais - Transformando Vidas</title>
+    <title>Mãos que Transformam | ONG</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+        /* Estilização Geral */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        header { background: #2c3e50; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+        
+        /* Banner Principal */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover; background-position: center; height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; 
         }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .card {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 { color: #2980b9; }
-        .btn {
-            display: inline-block;
-            background: #27ae60;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #2c3e50;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+        /* Seções */
+        section { padding: 4rem 10%; }
+        .about { background: #f9f9f9; text-align: center; }
+        
+        /* Grid de Aulas */
+        .classes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 10px; transition: 0.3s; background: white; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .card h3 { color: #e67e22; }
+
+        /* Doações e Contato */
+        .donation { background: #27ae60; color: white; text-align: center; }
+        .btn-donate { background: white; color: #27ae60; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; font-weight: bold; }
+        
+        form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
+        input, textarea { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .btn-send { background: #2c3e50; color: white; border: none; padding: 10px; cursor: pointer; }
+
+        footer { background: #222; color: white; text-align: center; padding: 1rem; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ONG EducaMais</h1>
-    <p>Levando educação gratuita para quem mais precisa.</p>
-</header>
+    <header>
+        <div class="logo"><h2>Mãos que Transformam</h2></div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#aulas">Aulas</a>
+            <a href="#doar">Doar</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <div class="card">
-        <h2>Sobre Nós</h2>
-        <p>Somos um projeto dedicado a oferecer aulas de reforço, capacitação e cultura para jovens de comunidades carentes. Nosso sistema interno (C) nos ajuda a gerenciar voluntários, doações e as aulas diárias.</p>
-    </div>
+    <section class="hero">
+        <div>
+            <h1>Transformando vidas através da comunidade</h1>
+            <p>Juntos, podemos criar um futuro melhor para todos.</p>
+        </div>
+    </section>
 
-    <div class="card">
-        <h2>Nossos Impactos</h2>
-        <ul>
-            <li>Centenas de horas de aulas ministradas.</li>
-            <li>Alunos capacitados para o mercado de trabalho.</li>
-            <li>Doações 100% revertidas para infraestrutura educacional.</li>
-        </ul>
-    </div>
+    <section id="sobre" class="about">
+        <h2>Sobre a Gente</h2>
+        <p>Somos uma organização sem fins lucrativos dedicada a oferecer suporte, educação e esperança para famílias em situação de vulnerabilidade. Acreditamos que o conhecimento é a ferramenta mais poderosa para a mudança social.</p>
+    </section>
 
-    <div class="card" style="text-align: center;">
-        <h2>Apoie nossa Causa</h2>
-        <p>Entre em contato com nossa administração para fazer doações ou se tornar um professor voluntário!</p>
-        <a href="#" class="btn">Quero Ajudar</a>
-    </div>
+    <section id="aulas">
+        <h2 style="text-align:center">Nossas Aulas e Oficinas</h2>
+        <div class="classes-grid">
+            <div class="card">
+                <h3>Informática Básica</h3>
+                <p>Inclusão digital para jovens e adultos, ensinando desde o uso do PC até ferramentas de trabalho.</p>
+            </div>
+            <div class="card">
+                <h3>Artes e Ofícios</h3>
+                <p>Aulas de pintura, costura e artesanato para geração de renda extra para as famílias.</p>
+            </div>
+            <div class="card">
+                <h3>Reforço Escolar</h3>
+                <p>Apoio pedagógico em matemática e português para crianças do ensino fundamental.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-    <h2>Faça uma Doação</h2>
-    <form id="donationForm">
-        <input type="text" id="nome" placeholder="Seu Nome" required style="width: 90%; padding: 10px; margin-bottom: 10px;"><br>
-        <input type="email" id="email" placeholder="Seu E-mail" required style="width: 90%; padding: 10px; margin-bottom: 10px;"><br>
-        <input type="number" id="valor" placeholder="Valor (R$)" required style="width: 90%; padding: 10px; margin-bottom: 10px;"><br>
-        <button type="submit" class="btn" style="border: none; cursor: pointer;">Enviar Doação</button>
-    </form>
-    <p id="mensagem"></p>
-</div>
+    <section id="doar" class="donation">
+        <h2>Faça a Diferença</h2>
+        <p>Sua doação ajuda a manter nossos professores e a compra de materiais didáticos.</p>
+        <button class="btn-donate">DOAR VIA PIX</button>
+        <p><small>*Também aceitamos alimentos e roupas em nossa sede.</small></p>
+    </section>
 
-    <script>
-        // Código para enviar os dados para o Java
-        document.getElementById('donationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-    
-            const dados = {
-                nome: document.getElementById('nome').value,
-                email: document.getElementById('email').value,
-                valor: document.getElementById('valor').value
-            };
-    
-            // Aqui você trocaria pelo link do seu Back-end publicado
-            fetch('https://seu-backend-java.com/api/doacoes', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(dados)
-            })
-            .then(response => {
-                if(response.ok) {
-                    document.getElementById('mensagem').innerText = "Obrigado pela doação!";
-                    this.reset();
-                }
-            });
-        });
-    </script>
-</div>
+    <section id="contato">
+        <h2 style="text-align:center">Fale Conosco</h2>
+        <form>
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <textarea rows="5" placeholder="Como podemos ajudar?" required></textarea>
+            <button type="submit" class="btn-send">Enviar Mensagem</button>
+        </form>
+    </section>
 
-<footer>
-    <p>&copy; 2026 Projeto de Extensão Universitária - Desenvolvido no Github/Replit.</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Mãos que Transformam - Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
